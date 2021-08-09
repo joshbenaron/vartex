@@ -52,7 +52,7 @@ const developmentSyncLength: number | undefined =
     undefined :
     parseInt(process.env["DEVELOPMENT_SYNC_LENGTH"] as string);
 
-if (isNaN(developmentSyncLength)) {
+if (developmentSyncLength === NaN) {
   console.error("Development sync range variable produced, illegal value NaN");
   process.exit(1);
 }
